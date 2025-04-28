@@ -7,7 +7,10 @@ export default function ReadmeGenerator() {
   const [generatedContent, setGeneratedContent] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e: { preventDefault: () => void; currentTarget: HTMLFormElement | undefined; }) => {
+  const handleSubmit = async (e: {
+    preventDefault: () => void;
+    currentTarget: HTMLFormElement | undefined;
+  }) => {
     e.preventDefault();
     setLoading(true);
     setError("");
@@ -45,7 +48,10 @@ export default function ReadmeGenerator() {
 
             <form onSubmit={handleSubmit} className="space-y-6 text-black">
               <div>
-                <label htmlFor="title" className="block text-lg font-bold text-black mb-2">
+                <label
+                  htmlFor="title"
+                  className="block text-lg font-bold text-black mb-2"
+                >
                   Project Title
                 </label>
                 <input
@@ -58,7 +64,10 @@ export default function ReadmeGenerator() {
               </div>
 
               <div>
-                <label htmlFor="description" className="block text-lg font-bold text-black mb-2">
+                <label
+                  htmlFor="description"
+                  className="block text-lg font-bold text-black mb-2"
+                >
                   Description
                 </label>
                 <textarea
@@ -71,7 +80,10 @@ export default function ReadmeGenerator() {
               </div>
 
               <div>
-                <label htmlFor="motive" className="block text-lg font-bold text-black mb-2">
+                <label
+                  htmlFor="motive"
+                  className="block text-lg font-bold text-black mb-2"
+                >
                   Motive behind the project
                 </label>
                 <textarea
@@ -84,7 +96,10 @@ export default function ReadmeGenerator() {
               </div>
 
               <div>
-                <label htmlFor="features" className="block text-lg font-bold text-black mb-2">
+                <label
+                  htmlFor="features"
+                  className="block text-lg font-bold text-black mb-2"
+                >
                   Features and Working
                 </label>
                 <textarea
@@ -97,7 +112,10 @@ export default function ReadmeGenerator() {
               </div>
 
               <div>
-                <label htmlFor="technologies" className="block text-lg font-bold text-black mb-2">
+                <label
+                  htmlFor="technologies"
+                  className="block text-lg font-bold text-black mb-2"
+                >
                   Technologies
                 </label>
                 <input
@@ -110,7 +128,10 @@ export default function ReadmeGenerator() {
               </div>
 
               <div>
-                <label htmlFor="domain" className="block text-lg font-bold text-black mb-2">
+                <label
+                  htmlFor="domain"
+                  className="block text-lg font-bold text-black mb-2"
+                >
                   Domain
                 </label>
                 <input
@@ -123,7 +144,10 @@ export default function ReadmeGenerator() {
               </div>
 
               <div>
-                <label htmlFor="setup" className="block text-lg font-bold text-black mb-2">
+                <label
+                  htmlFor="setup"
+                  className="block text-lg font-bold text-black mb-2"
+                >
                   Setup Instructions
                 </label>
                 <textarea
@@ -163,14 +187,18 @@ export default function ReadmeGenerator() {
                 </h2>
                 <div className="bg-blue-100 p-6 border-4 border-black">
                   <div className="flex justify-end mb-2">
-                    <button 
-                      onClick={() => navigator.clipboard.writeText(generatedContent)}
+                    <button
+                      onClick={() =>
+                        navigator.clipboard.writeText(generatedContent)
+                      }
                       className="bg-purple-200 px-4 py-2 border-2 border-black font-bold hover:bg-purple-300"
                     >
                       COPY
                     </button>
                   </div>
-                  <pre className="whitespace-pre-wrap text-black overflow-auto">{generatedContent}</pre>
+                  <pre className="whitespace-pre-wrap text-black overflow-auto">
+                    {generatedContent}
+                  </pre>
                 </div>
               </div>
             )}
