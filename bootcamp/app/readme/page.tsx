@@ -8,7 +8,7 @@ export default function ReadmeGenerator() {
   const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    
+    e.preventDefault();
     setLoading(true);
     setError("");
     setGeneratedContent("");
@@ -41,7 +41,10 @@ export default function ReadmeGenerator() {
 
             <form onSubmit={handleSubmit} className="space-y-6 text-black">
               <div>
-                <label htmlFor="title" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="title"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Project Title
                 </label>
                 <input
@@ -54,7 +57,10 @@ export default function ReadmeGenerator() {
               </div>
 
               <div>
-                <label htmlFor="description" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="description"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Description
                 </label>
                 <textarea
@@ -67,7 +73,10 @@ export default function ReadmeGenerator() {
               </div>
 
               <div>
-                <label htmlFor="motive" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="motive"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Motive behind the project
                 </label>
                 <textarea
@@ -80,7 +89,10 @@ export default function ReadmeGenerator() {
               </div>
 
               <div>
-                <label htmlFor="features" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="features"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Features and Working
                 </label>
                 <textarea
@@ -93,7 +105,10 @@ export default function ReadmeGenerator() {
               </div>
 
               <div>
-                <label htmlFor="technologies" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="technologies"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Technologies
                 </label>
                 <input
@@ -106,7 +121,10 @@ export default function ReadmeGenerator() {
               </div>
 
               <div>
-                <label htmlFor="domain" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="domain"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Domain
                 </label>
                 <input
@@ -119,7 +137,10 @@ export default function ReadmeGenerator() {
               </div>
 
               <div>
-                <label htmlFor="setup" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="setup"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Setup Instructions
                 </label>
                 <textarea
@@ -158,7 +179,9 @@ export default function ReadmeGenerator() {
                   Generated README
                 </h2>
                 <div className="bg-gray-50 p-4 rounded-md">
-                  <pre className="whitespace-pre-wrap text-black">{generatedContent}</pre>
+                  <pre className="whitespace-pre-wrap text-black">
+                    {generatedContent}
+                  </pre>
                 </div>
               </div>
             )}
